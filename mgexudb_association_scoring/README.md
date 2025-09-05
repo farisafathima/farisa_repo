@@ -18,8 +18,9 @@ We then normalize (min–max to [1,100]), optionally merge A+B with **IQR-banded
 
 
 ## Quickshare
-# 1) Compute Direction A (N→C off)
 
+### 1) Compute Direction A (N→C off)
+```bash
 python src/association_score.py \
   --normal-transcribed data/normal_transcribed.tsv \
   --normal-dormant    data/normal_dormant.tsv \
@@ -29,41 +30,3 @@ python src/association_score.py \
   --out results/comb_1a_as.tsv \
   --plot results/comb_1a.png \
   --title "AS Scaled 1 vs Normal transcribed & Disease dormant"
-
-
-# 2) Compute Direction B (C→N off)
-
-python src/association_score.py \
-  --normal-transcribed data/normal_transcribed.tsv \
-  --normal-dormant    data/normal_dormant.tsv \
-  --cond-transcribed  data/disease_transcribed.tsv \
-  --cond-dormant      data/disease_dormant.tsv \
-  --direction B \
-  --out results/comb_1b_as.tsv \
-  --plot results/comb_1b.png \
-  --title "AS Scaled 2 vs Normal dormant & Disease transcribed"
-
-
-# 3) Merge + (optional) IQR banded scaling
-
-python src/merge_iqr.py \
-  --a results/comb_1a_as.tsv \
-  --b results/comb_1b_as.tsv \
-  --out results/merged_as_1.tsv \
-  --iqr true \
-  --bottom-band 1 2 \
-  --mid-band 2 99 \
-  --top-band 99 100
-
-
-# 4) Plot summary (top-N per direction) from merged file
-
-python src/plot_results.py \
-  --mode top10 \
-  --in results/merged_as_1.tsv \
-  --out results/top10_summary.png \
-  --top-n 10
-
-
-
-
