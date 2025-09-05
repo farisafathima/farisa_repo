@@ -19,14 +19,17 @@ We then normalize (min–max to [1,100]), optionally merge A+B with **IQR-banded
 
 ## Quickshare
 1) Compute Direction A (N->C off):
+   
+```bash
 python src/association_score.py \
   --normal-transcribed data/normal_transcribed.tsv \
-  --normal-dormant    data/normal_dormant.tsv \
-  --cond-transcribed  data/disease_transcribed.tsv \
-  --cond-dormant      data/disease_dormant.tsv \
+  --normal-dormant data/normal_dormant.tsv \
+  --cond-transcribed data/disease_transcribed.tsv \
+  --cond-dormant data/disease_dormant.tsv \
   --direction A \
   --out results/comb_1a_as.tsv \
   --plot results/comb_1a.png \
-  --title "AS Scaled 1 vs Normal transcribed & Disease dormant"
+  --title "AS Scaled 1 vs Normal transcribed & Disease dormant"```
+
 
 2) Compute Direction B (C->N off):
