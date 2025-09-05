@@ -17,7 +17,7 @@ we compute:
 We then normalize (min–max to [1,100]), optionally merge A+B with **IQR-banded scaling**, and plot.
 
 
-#Quickshare
+## Quickshare
 1) Compute Direction A (N->C off):
 python src/association_score.py \
   --normal-transcribed data/normal_transcribed.tsv \
