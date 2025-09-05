@@ -1,0 +1,5 @@
+- **Gene_ID**: NCBI Entrez or MGEx-Udb identifier  
+- **Gene_Name**: Standard gene symbol (may be blank if not provided)  
+- **Score**: Reliability score (numeric), indicating how consistently the gene is reported in that state.  
+  - Negative values indicate the gene is in dormant state 
+  - Positive values indicate the gene is in transcribed state 
