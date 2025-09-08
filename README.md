@@ -7,7 +7,7 @@ I built baseline models (3D CNN for sMRI, Transformer for fMRI time series, Brai
 improved accuracy compared to single-modality models
 
 
-## 2. mgexudb_association_score >
+## 2. mgexudb_association_scoring >
 ## Cumulative scoring of absolute expression calls associated with specific conditions and visualization
    
 
