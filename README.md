@@ -1,6 +1,6 @@
 # Projects
 ## 1. autism_prediction >
-##Multimodal Deep Learning for Autism Spectrum Disorder Classification Using Structural and Functional MRI
+## Multimodal Deep Learning for Autism Spectrum Disorder Classification Using Structural and Functional MRI
 
 This project focused on classifying Autism Spectrum Disorder (ASD) using the ABIDE I & II dataset containing T1-weighted structural MRI and resting-state fMRI. 
 I built baseline models (3D CNN for sMRI, Transformer for fMRI time series, BrainNetCNN for connectivity) and a multimodal attention-based fusion model, which 
